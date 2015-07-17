@@ -37,6 +37,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill = Skill.find(params[:id])
     @skill.destroy
+    flash[:notice] = "How do you actually loose a skill?"
     redirect_to skills_path
   end
 
